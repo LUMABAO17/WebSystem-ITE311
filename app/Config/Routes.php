@@ -1,8 +1,19 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
+
+use CodeIgniter\Routing\RouteCollection;
+use CodeIgniter\Routing\Router;
 
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('Home');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(true);
+
+// ✅ Custom route
+$routes->get('home', 'Home::index');
