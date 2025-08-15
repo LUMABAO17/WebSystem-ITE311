@@ -13,16 +13,17 @@ class CreateUsersTable extends Migration
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
-                'auto_increment' => true
+                'auto_increment' => true,
             ],
-            'name' => [
+            'username' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 100,
+                'constraint' => 50,
+                'unique'     => true,
             ],
             'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
-                'unique'     => true
+                'unique'     => true,
             ],
             'password' => [
                 'type'       => 'VARCHAR',
@@ -35,7 +36,7 @@ class CreateUsersTable extends Migration
             'updated_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
-            ]
+            ],
         ]);
 
         $this->forge->addKey('id', true);
@@ -43,8 +44,7 @@ class CreateUsersTable extends Migration
     }
 
     public function down()
-{
-    $this->forge->dropTable('users', true); // <-- true = IF EXISTS
-}
-
+    {
+        $this->forge->dropTable('users');
+    }
 }

@@ -10,26 +10,28 @@ class UserSeeder extends Seeder
     {
         $data = [
             [
-                'name'     => 'Admin LUMABAO17',
+                'username' => 'Admin LUMABAO17',
                 'email'    => 'almuhyilumabao2.com',
                 'password' => password_hash('admin123', PASSWORD_DEFAULT),
-                'role'     => 'admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name'     => 'Instructor Elle',
+                'username' => 'Instructor Elle',
                 'email'    => '3lleyyy@gmail.com',
                 'password' => password_hash('instructor123', PASSWORD_DEFAULT),
-                'role'     => 'instructor',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name'     => 'Student Yunah',
+                'username' => 'Student Yunah',
                 'email'    => 'handsomeyunah@gmail.com',
                 'password' => password_hash('student123', PASSWORD_DEFAULT),
-                'role'     => 'student',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
         ];
 
-        // Insert multiple records
         $this->db->table('users')->insertBatch($data);
     }
 }
