@@ -16,4 +16,4 @@ $routes->set404Override();
 $routes->setAutoRoute(true);
 
 // ✅ Custom route
-$routes->get('home', 'Home::index');
+$routes->get('/', 'Home::index');
