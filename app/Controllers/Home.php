@@ -4,9 +4,18 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        $data['content'] = view('home');
-        return view('template', $data);
+        return view('index');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 }
