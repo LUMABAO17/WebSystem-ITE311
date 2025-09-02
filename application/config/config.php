@@ -24,8 +24,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = '';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 93a09e5307e0f02cc1dbf798a06b1a8fc5edd195
 /*
 |--------------------------------------------------------------------------
 | Index File

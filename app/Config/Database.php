@@ -27,9 +27,15 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
+<<<<<<< HEAD
         'username'     => 'root',
         'password'     => '',
         'database'     => 'lms_maca',
+=======
+        'username'     => 'root',        // default MySQL user sa XAMPP
+        'password'     => '',            // default walang password
+        'database'     => 'lms_maca',    // pangalan ng database mo
+>>>>>>> 93a09e5307e0f02cc1dbf798a06b1a8fc5edd195
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -51,6 +57,10 @@ class Database extends Config
         ],
     ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 93a09e5307e0f02cc1dbf798a06b1a8fc5edd195
     //    /**
     //     * Sample database connection for SQLite3.
     //     *
