@@ -1,0 +1,190 @@
+DEBUG - 2025-09-02 01:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-02 01:31:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'lms_gomez' in C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'lms_gomez', 3306, '', 0)
+#1 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MACA\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MACA\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacaferna...', 'users.email', Array)
+#6 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacaferna...', 'users.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacaferna...', Array, Array, 'email')
+#8 C:\xampp\htdocs\ITE311-MACA\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\ITE311-MACA\app\Controllers\Auth.php(49): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(933): App\Controllers\Auth->register()
+#11 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#12 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\ITE311-MACA\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'lms_gomez' in C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ITE311-MACA\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ITE311-MACA\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacaferna...', 'users.email', Array)
+#5 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacaferna...', 'users.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacaferna...', Array, Array, 'email')
+#7 C:\xampp\htdocs\ITE311-MACA\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ITE311-MACA\app\Controllers\Auth.php(49): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(933): App\Controllers\Auth->register()
+#10 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-MACA\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-09-02 01:31:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'lms_gomez'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacafernandez@gmail.com', 'users.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacafernandez@gmail.com', 'users.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacafernandez@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Auth.php(49): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->register()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-09-02 01:33:22 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'lms_gomez' in C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'lms_gomez', 3306, '', 0)
+#1 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-MACA\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-MACA\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacaferna...', 'users.email', Array)
+#6 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacaferna...', 'users.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacaferna...', Array, Array, 'email')
+#8 C:\xampp\htdocs\ITE311-MACA\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\ITE311-MACA\app\Controllers\Auth.php(49): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(933): App\Controllers\Auth->register()
+#11 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#12 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\ITE311-MACA\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'lms_gomez' in C:\xampp\htdocs\ITE311-MACA\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ITE311-MACA\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ITE311-MACA\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ITE311-MACA\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacaferna...', 'users.email', Array)
+#5 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacaferna...', 'users.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\ITE311-MACA\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacaferna...', Array, Array, 'email')
+#7 C:\xampp\htdocs\ITE311-MACA\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\ITE311-MACA\app\Controllers\Auth.php(49): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(933): App\Controllers\Auth->register()
+#10 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\ITE311-MACA\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ITE311-MACA\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\ITE311-MACA\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-09-02 01:33:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'lms_gomez'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('geraldmacafernandez@gmail.com', 'users.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('geraldmacafernandez@gmail.com', 'users.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'geraldmacafernandez@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Auth.php(49): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->register()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-02 01:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-09-02 01:55:36 --> ParseError: syntax error, unexpected token ")"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\auth\dashboard.php on line 39.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/dashboard', [], true)
+ 3 APPPATH\Controllers\Auth.php(157): view('auth/dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-02 01:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-02 01:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
