@@ -12,9 +12,6 @@ declare(strict_types=1);
  */
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 93a09e5307e0f02cc1dbf798a06b1a8fc5edd195
 /**
  * ---------------------------------------------------------------
  * This file cannot be used. The code has moved to Boot.php.
@@ -165,7 +162,6 @@ if (! is_file(COMPOSER_PATH)) {
 Services::autoloader()->initializeKint(CI_DEBUG);
 
 exit(1);
-<<<<<<< HEAD
 =======
 use CodeIgniter\Boot;
 use Config\Paths;
@@ -245,5 +241,3 @@ Boot::bootTest($paths);
 
 service('routes')->loadRoutes();
 >>>>>>> 37bee22 (Add database migrations and seeders)
-=======
->>>>>>> 93a09e5307e0f02cc1dbf798a06b1a8fc5edd195
