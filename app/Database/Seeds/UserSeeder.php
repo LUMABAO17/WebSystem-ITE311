@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
                 'name' => 'Krishy game',
                 'email' => 'krish@gmail.com',
                 'password' => password_hash('kirsh123', PASSWORD_DEFAULT),
-                'role' => 'instructor',
+                'role' => 'teacher',
                 'created_at' => date('Y-m-d H:i:s')
             ]
         ];

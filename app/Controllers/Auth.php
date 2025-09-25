@@ -45,7 +45,7 @@ class Auth extends BaseController
                     $db->table('users')->insert($userData);
                     
                     // Set success message
-                    session()->setFlashdata('success', 'Registration successful! Please login.');
+                    session()->flashdata('success', 'Registration successful! Please login.');
                     
                     // Redirect to login page
                     return redirect()->to('/login');
@@ -55,7 +55,7 @@ class Auth extends BaseController
                     log_message('error', 'Registration error: ' . $e->getMessage());
                     
                     // Set error message
-                    session()->setFlashdata('error', 'An error occurred. Please try again.');
+                    session()->flashdata('error', 'An error occurred. Please try again.');
                 }
             } else {
                 // Validation failed, show errors
@@ -98,7 +98,7 @@ class Auth extends BaseController
             }
             
             // If we get here, login failed
-            session()->setFlashdata('error', 'Invalid email or password');
+            session()->flashdata('error', 'Invalid email or password');
         }
         
         return view('auth/login');
@@ -126,14 +126,13 @@ class Auth extends BaseController
             ]
         ];
         
-        // Load the appropriate dashboard based on user role
         $role = strtolower(session()->get('role') ?? 'student');
         
         switch ($role) {
             case 'admin':
                 return view('dashboard/admindashboard', $userData);
-            case 'instructor':
-                return view('dashboard/instructordashboard', $userData);
+            case 'teacher':
+                return view('dashboard/teacherdashboard', $userData);
             case 'student':
             default:
                 return view('dashboard/studentdashboard', $userData);
