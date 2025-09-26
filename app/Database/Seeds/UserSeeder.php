@@ -3,8 +3,6 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
-use CodeIgniter\I18n\Time;
-
 
 class UserSeeder extends Seeder
 {
@@ -16,6 +14,7 @@ class UserSeeder extends Seeder
                 'email' => 'JeraldMaca@gmail.com',
                 'password' => password_hash('admin123', PASSWORD_DEFAULT),
                 'role' => 'admin',
+                'is_active' => 1,
                 'created_at' => date('Y-m-d H:i:s')
             ],
             [
@@ -23,17 +22,19 @@ class UserSeeder extends Seeder
                 'email' => 'Gomez@gmail.com',
                 'password' => password_hash('2311600073', PASSWORD_DEFAULT),
                 'role' => 'student',
+                'is_active' => 1,
                 'created_at' => date('Y-m-d H:i:s')
             ],
             [
-                'name' => 'Krishy game',
-                'email' => 'krish@gmail.com',
-                'password' => password_hash('kirsh123', PASSWORD_DEFAULT),
+                'name' => 'Krishy Talino',
+                'email' => 'Krish@gmail.com',
+                'password' => password_hash('2311600074', PASSWORD_DEFAULT),
                 'role' => 'teacher',
+                'is_active' => 1,
                 'created_at' => date('Y-m-d H:i:s')
             ]
         ];
-        // Insert all data in one go
+
         $this->db->table('users')->insertBatch($data);
     }
 }
