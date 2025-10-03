@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - ITE311 MACA</title>
+    <title>Login - ITE311 LUMABAO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -21,11 +21,11 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .btn-primary {
-            background-color: #0d6efd;
+            background-color:rgb(66, 187, 66);
             border: none;
         }
         .form-control:focus {
-            border-color: #0d6efd;
+            border-color:rgb(66, 187, 66);
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
         }
     </style>
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('/') ?>">
-                <i class="fas fa-graduation-cap me-2"></i> ITE311-MACA
+                <i class="fas fa-graduation-cap me-2"></i> ITE311-LUMABAO
             </a>
         </div>
     </nav>
@@ -107,11 +107,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>ITE311-MACA</h5>
+                    <h5>ITE311-LUMABAO</h5>
                     <p class="text-muted">Learning Management System</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="text-muted mb-0">&copy; <?= date('Y') ?> ITE311 MACA. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; <?= date('Y') ?> ITE311 LUMABAO. All rights reserved.</p>
                 </div>
             </div>
         </div>

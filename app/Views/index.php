@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - ITE311 MACA</title>
+    <title>Home - ITE311 LUMABAO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
+            background-color:rgb(255, 255, 255);
             color: #333;
             line-height: 1.6;
         }
         
         .navbar {
             background: #fff !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(128, 52, 52, 0.1);
         }
         
         .navbar-brand {
             font-weight: 700;
-            color: #0d6efd !important;
+            color:rgb(66, 187, 66) !important;
         }
         
         .nav-link {
@@ -29,11 +29,11 @@
         }
         
         .nav-link:hover, .nav-link.active {
-            color: #0d6efd !important;
+            color:rgb(66, 187, 66) !important;
         }
         
         .hero-section {
-            background: #0d6efd;
+            background:rgb(66, 187, 66);
             color: white;
             padding: 4rem 0;
             margin-bottom: 2rem;
@@ -55,7 +55,7 @@
         
         .feature-icon {
             font-size: 2rem;
-            color: #0d6efd;
+            color:rgb(66, 187, 66);
             margin-bottom: 1rem;
         }
         
@@ -72,7 +72,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('/') ?>">
-                <i class="fas fa-graduation-cap me-2"></i> ITE311-MACA
+                <i class="fas fa-graduation-cap me-2"></i> ITE311-LUMABAO
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -182,7 +182,7 @@
                     <p class="mb-0">Providing quality IT education for students</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">&copy; <?= date('Y') ?> ITE311 MACA. All rights reserved.</p>
+                    <p class="mb-0">&copy; <?= date('Y') ?> ITE311 LUMABAO. All rights reserved.</p>
                 </div>
             </div>
         </div>

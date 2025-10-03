@@ -45,3 +45,12 @@ Options All -Indexes
 
 # Disable server signature start
 ServerSignature Off
+
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /ITE311-LUMABAO/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>

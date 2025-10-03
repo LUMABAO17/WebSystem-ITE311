@@ -3,10 +3,8 @@ Options -Indexes
 
 # Redirect all requests to the public directory
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /ITE311-MACA/
-    
-    # Redirect to public directory
-    RewriteRule ^$ public/ [L]
-    RewriteRule (.*) public/$1 [L]
+   RewriteEngine On
+  RewriteBase /ITE311-LUMABAO/
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
 </IfModule>

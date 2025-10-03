@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - ITE311 MACA</title>
+    <title>Contact - ITE311 LUMABAO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: rgb(255, 255, 255);
+        }
+        .navbar {
+            background: #fff !important;
+            box-shadow: 0 2px 4px rgba(128, 52, 52, 0.1);
+        }
+        .navbar-brand {
+            color: rgb(68, 20, 202) !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: rgb(68, 20, 202) !important;
         }
         .card {
             border: none;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(128, 52, 52, 0.1);
         }
         .btn-primary {
-            background-color: #0d6efd;
+            background-color: rgb(66, 187, 66);
             border: none;
         }
     </style>
@@ -27,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('/') ?>">
-                <i class="fas fa-graduation-cap me-2"></i> ITE311-MACA
+                <i class="fas fa-graduation-cap me-2"></i> ITE311-LUMABAO
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -111,11 +122,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>ITE311-MACA</h5>
+                    <h5>ITE311-LUMABAO</h5>
                     <p class="text-muted">Learning Management System</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="text-muted mb-0">&copy; <?= date('Y') ?> ITE311 MACA. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; <?= date('Y') ?> ITE311 LUMABAO. All rights reserved.</p>
                 </div>
             </div>
         </div>
