@@ -13,7 +13,7 @@ $routes->get('about', 'Home::about');
 $routes->get('contact', 'Home::contact');
 
 // Authentication routes
-$routes->group('', ['namespace' => 'App\Controllers'], function($routes) {
+$routes->group('', ['namespace' => 'App\\Controllers'], function($routes) {
     // Public routes
     $routes->get('/register', 'Auth::register');
     $routes->post('/register', 'Auth::register');
@@ -23,6 +23,9 @@ $routes->group('', ['namespace' => 'App\Controllers'], function($routes) {
     $routes->group('', ['filter' => 'auth'], function($routes) {
         $routes->get('/logout', 'Auth::logout');
         $routes->get('/dashboard', 'Auth::dashboard', ['as' => 'dashboard']);
+        
+        // Course Enrollment
+        $routes->post('/course/enroll', 'Course::enroll');
         
         // Admin routes
         $routes->group('admin', ['filter' => 'role:admin'], function($routes) {

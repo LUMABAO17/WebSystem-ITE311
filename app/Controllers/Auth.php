@@ -346,10 +346,10 @@ class Auth extends BaseController
                     ->countAllResults();
                     
                 $data['students'] = $db->table('enrollments')
-                    ->select('enrollments.student_id')
+                    ->select('enrollments.user_id')
                     ->join('courses', 'courses.id = enrollments.course_id')
                     ->where('courses.teacher_id', $userId)
-                    ->groupBy('enrollments.student_id')
+                    ->groupBy('enrollments.user_id')
                     ->countAllResults();
                     
                 $data['recent_courses'] = $db->table('courses')
@@ -363,7 +363,7 @@ class Auth extends BaseController
             case 'student':
                 // Get student-specific data
                 $data['enrolled_courses'] = $db->table('enrollments')
-                    ->where('student_id', $userId)
+                    ->where('user_id', $userId)
                     ->countAllResults();
                     
                 // Initialize completed lessons to 0 since we don't have the user_progress table
@@ -372,9 +372,30 @@ class Auth extends BaseController
                 $data['recent_courses'] = $db->table('enrollments')
                     ->select('courses.*')
                     ->join('courses', 'courses.id = enrollments.course_id')
-                    ->where('enrollments.student_id', $userId)
-                    ->orderBy('enrollments.enrolled_at', 'DESC')
+                    ->where('enrollments.user_id', $userId)
+                    ->orderBy('enrollments.enrollment_date', 'DESC')
                     ->limit(3)
+                    ->get()
+                    ->getResultArray();
+
+                // Full enrolled list for dashboard display
+                $data['enrolled_list'] = $db->table('enrollments')
+                    ->select('courses.*, enrollments.enrollment_date')
+                    ->join('courses', 'courses.id = enrollments.course_id')
+                    ->where('enrollments.user_id', $userId)
+                    ->orderBy('enrollments.enrollment_date', 'DESC')
+                    ->get()
+                    ->getResultArray();
+
+                // Available courses (not yet enrolled)
+                $sub = $db->table('enrollments')
+                    ->select('course_id')
+                    ->where('user_id', $userId)
+                    ->getCompiledSelect();
+
+                $data['available_courses'] = $db->table('courses')
+                    ->where("id NOT IN (" . $sub . ")", null, false)
+                    ->orderBy('created_at', 'DESC')
                     ->get()
                     ->getResultArray();
                 break;

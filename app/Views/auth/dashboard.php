@@ -1,4 +1,4 @@
-<?= $this->extend('templates/header'); ?>
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 <?= $this->extend('templates/header'); ?>
 <?= $this->section('title') ?><?= ucfirst($user['role']) ?> Dashboard<?= $this->endSection() ?>
 <style>
     :root {
@@ -731,6 +731,59 @@
                 </div>
                             </div>
                             
+            <!-- Enrollment Sections -->
+            <div class="row g-4 mt-2">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3 d-flex align-items-center">
+                            <h5 class="mb-0"><i class="fas fa-list-check me-2" style="color: var(--primary-color);"></i>Enrolled Courses</h5>
+                        </div>
+                        <div class="card-body">
+                            <?php if (!empty($enrolled_list)): ?>
+                                <ul class="list-group" id="enrolledList">
+                                    <?php foreach ($enrolled_list as $course): ?>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <div class="fw-semibold"><?= esc($course['title']) ?></div>
+                                                <small class="text-muted">Enrolled: <?= date('M j, Y', strtotime($course['enrollment_date'] ?? $course['enrolled_at'] ?? 'now')) ?></small>
+                                            </div>
+                                            <a class="btn btn-sm btn-outline-primary" href="<?= site_url('student/courses/' . $course['id']) ?>">Open</a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php else: ?>
+                                <div class="text-center text-muted">No enrollments yet.</div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3 d-flex align-items-center">
+                            <h5 class="mb-0"><i class="fas fa-book-open me-2" style="color: var(--primary-color);"></i>Available Courses</h5>
+                        </div>
+                        <div class="card-body">
+                            <?php if (!empty($available_courses)): ?>
+                                <div class="list-group" id="availableList">
+                                    <?php foreach ($available_courses as $course): ?>
+                                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <div class="fw-semibold"><?= esc($course['title']) ?></div>
+                                                <small class="text-muted"><?= esc(substr($course['description'] ?? '', 0, 90)) ?></small>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary enroll-btn" data-course-id="<?= (int)$course['id'] ?>">Enroll</button>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php else: ?>
+                                <div class="text-center text-muted">No available courses.</div>
+                            <?php endif; ?>
+                            <div id="enrollAlert" class="mt-3" style="display:none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Recent Activity Section -->
             <div class="card border-0 shadow-sm mt-4">
                 <div class="card-header bg-white border-0 py-3">
@@ -853,3 +906,70 @@
     </div>
 </div>
 <?= $this->endSection(); ?>
+
+<?= $this->section('scripts') ?>
+<script>
+$(function() {
+    var csrfTokenName = '<?= csrf_token() ?>';
+    var csrfToken = '<?= csrf_hash() ?>';
+
+    $.ajaxSetup({
+        headers: { 'X-CSRF-TOKEN': csrfToken }
+    });
+
+    function showAlert(type, message) {
+        var html = '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">'
+            + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        $('#enrollAlert').html(html).show();
+    }
+
+    $('#availableList').on('click', '.enroll-btn', function(e) {
+        e.preventDefault();
+        var $btn = $(this);
+        var courseId = $btn.data('course-id');
+        $btn.prop('disabled', true).text('Enrolling...');
+
+        var payload = { course_id: courseId };
+        payload[csrfTokenName] = csrfToken;
+
+        $.post('<?= site_url('/course/enroll') ?>', payload)
+            .done(function(res, textStatus, xhr) {
+                if (res.status === 'success' || res.status === 'exists') {
+                    var msg = res.status === 'success' ? 'Enrolled successfully.' : 'Already enrolled.';
+                    showAlert('success', msg);
+                    // Move item to Enrolled list if success
+                    if (res.status === 'success' && res.course) {
+                        var item = '<li class="list-group-item d-flex justify-content-between align-items-center">'
+                            + '<div><div class="fw-semibold">' + $('<div>').text(res.course.title).html() + '</div>'
+                            + '<small class="text-muted">Enrolled: ' + new Date().toLocaleDateString() + '</small></div>'
+                            + '<a class="btn btn-sm btn-outline-primary" href="<?= site_url('student/courses') ?>/' + res.course.id + '">Open</a>'
+                            + '</li>';
+                        var $list = $('#enrolledList');
+                        if ($list.length === 0) {
+                            $('#enrolledList').remove();
+                            var wrapper = '<ul class="list-group" id="enrolledList"></ul>';
+                            $(wrapper).appendTo($('#enrolledList').parent());
+                        }
+                        $('#enrolledList').prepend(item);
+                    }
+                    // Remove or disable button
+                    $btn.closest('.list-group-item').remove();
+                } else {
+                    showAlert('danger', res.message || 'Failed to enroll');
+                    $btn.prop('disabled', false).text('Enroll');
+                }
+                // Update CSRF token from header if provided
+                var newToken = xhr.getResponseHeader('X-CSRF-TOKEN');
+                if (newToken) {
+                    csrfToken = newToken;
+                }
+            })
+            .fail(function(xhr) {
+                var msg = 'Error ' + xhr.status + ': ' + (xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : 'Request failed');
+                showAlert('danger', msg);
+                $btn.prop('disabled', false).text('Enroll');
+            });
+    });
+});
+</script>
+<?= $this->endSection() ?>
