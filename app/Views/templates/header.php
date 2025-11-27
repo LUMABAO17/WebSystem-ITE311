@@ -255,14 +255,36 @@ $userRole = session()->get('role') ?? 'guest';
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <!-- Top Navigation -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         LMS
                     </a>
-                    <button class="btn btn-link text-white" id="menu-toggle-mobile">
+                    <button class="btn btn-link text-white me-2" id="menu-toggle-mobile">
                         ☰
                     </button>
+
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <?php if (!empty($isLoggedIn)): ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link position-relative" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-bell"></i>
+                                    <span id="notification-badge" class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle" style="display: <?= ($notificationCount ?? 0) > 0 ? 'inline-block' : 'none' ?>;">
+                                        <?= $notificationCount ?? 0 ?>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="notificationDropdown" style="min-width: 320px;">
+                                    <div class="dropdown-header d-flex justify-content-between align-items-center">
+                                        <span>Notifications</span>
+                                        <small class="text-muted" id="notification-count-label"></small>
+                                    </div>
+                                    <div id="notification-list" class="list-group list-group-flush small">
+                                        <div class="list-group-item text-center text-muted" id="notification-empty">No notifications</div>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
                 </div>
             </nav>
             
@@ -309,8 +331,103 @@ $userRole = session()->get('role') ?? 'guest';
             });
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            function renderNotifications(data) {
+                var count = data.unread_count || 0;
+                var $badge = $('#notification-badge');
+                var $label = $('#notification-count-label');
+                var $list = $('#notification-list');
+                var $empty = $('#notification-empty');
+
+                if (count > 0) {
+                    $badge.text(count).show();
+                    $label.text(count + ' unread');
+                } else {
+                    $badge.hide();
+                    $label.text('No unread');
+                }
+
+                $list.find('.list-group-item').not('#notification-empty').remove();
+
+                if (!data.notifications || data.notifications.length === 0) {
+                    $empty.show();
+                    return;
+                }
+
+                $empty.hide();
+
+                data.notifications.forEach(function (n) {
+                    var $item = $('<div class="list-group-item d-flex justify-content-between align-items-start"></div>');
+                    var $body = $('<div class="me-2"></div>');
+                    $body.append($('<div></div>').text(n.message));
+                    if (n.created_at) {
+                        $body.append($('<small class="text-muted d-block"></small>').text(n.created_at));
+                    }
+
+                    var $btn = $('<button type="button" class="btn btn-sm btn-link text-decoration-none text-danger">Mark as read</button>');
+                    $btn.on('click', function (e) {
+                        e.preventDefault();
+                        markNotificationAsRead(n.id, $item);
+                    });
+
+                    $item.append($body).append($btn);
+                    $list.append($item);
+                });
+            }
+
+            function loadNotifications() {
+                $.get('<?= site_url('notifications') ?>')
+                    .done(function (res) {
+                        if (res && res.status === 'success') {
+                            renderNotifications(res);
+                        }
+                    });
+            }
+
+            function markNotificationAsRead(id, $item) {
+                if (!id) return;
+
+                // Optimistic UI update: remove the item and decrease badge immediately
+                if ($item && $item.length) {
+                    $item.remove();
+
+                    var $badge = $('#notification-badge');
+                    var $label = $('#notification-count-label');
+                    var $empty = $('#notification-empty');
+                    var current = parseInt($badge.text(), 10) || 0;
+                    var next = Math.max(current - 1, 0);
+
+                    if (next > 0) {
+                        $badge.text(next).show();
+                        $label.text(next + ' unread');
+                    } else {
+                        $badge.hide();
+                        $label.text('No unread');
+                        $empty.show();
+                    }
+                }
+
+                $.post('<?= site_url('notifications/mark_read') ?>/' + id, {
+                    '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
+                }).done(function (res) {
+                    if (res && res.status === 'success') {
+                        // Reload from server to stay in sync
+                        loadNotifications();
+                    }
+                });
+            }
+
+            // Initial load and periodic refresh
+            loadNotifications();
+            setInterval(loadNotifications, 60000);
+            window.refreshNotifications = function () {
+                loadNotifications();
+            };
+        });
+    </script>
     
     <?= $this->renderSection('scripts') ?>
 </body>
 </html>
-

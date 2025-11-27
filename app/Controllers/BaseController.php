@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\NotificationModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -97,10 +98,18 @@ abstract class BaseController extends Controller
      */
     protected function setupViewData()
     {
+        $notificationCount = 0;
+
+        if (!empty($this->userData)) {
+            $notificationModel = new NotificationModel();
+            $notificationCount = $notificationModel->getUnreadCount($this->userData['id']);
+        }
+
         $this->viewData = [
-            'title' => 'LMS System',
-            'user' => $this->userData,
-            'isLoggedIn' => !empty($this->userData)
+            'title'             => 'LMS System',
+            'user'              => $this->userData,
+            'isLoggedIn'        => !empty($this->userData),
+            'notificationCount' => $notificationCount,
         ];
     }
     

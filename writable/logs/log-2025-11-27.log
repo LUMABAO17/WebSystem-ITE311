@@ -474,3 +474,1506 @@ DEBUG - 2025-11-27 15:48:22 --> Session: Class initialized using 'App\Libraries\
 DEBUG - 2025-11-27 15:48:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
 DEBUG - 2025-11-27 15:48:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
 DEBUG - 2025-11-27 15:48:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:57:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:57:57 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:57:57 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:57:57 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:57:57 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:57:57 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:57:57 --> User data: {"id":"3","name":"leah","email":"leah@gmail.com","role":"teacher"}
+DEBUG - 2025-11-27 15:57:57 --> Rendering upload form view for course ID: 4
+DEBUG - 2025-11-27 15:57:57 --> Number of existing materials: 1
+DEBUG - 2025-11-27 15:57:57 --> View path: C:\xampp\htdocs\ITE311-LUMABAO\app\Views/admin/materials/upload.php
+DEBUG - 2025-11-27 15:57:57 --> View exists: Yes
+DEBUG - 2025-11-27 16:04:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:34 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:34 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:04:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:34 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:34 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:04:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:35 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:35 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:04:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:37 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: student/courses]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:37 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:04:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:39 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:39 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:04:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:04:40 --> mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\app\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+#7 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-27 16:04:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 5 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 7 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 9 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:04:40 --> [Caused by] mysqli_sql_exception: Table 'lms_lumabao.notifications' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = 2
+AND `is_read` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `notifications`
+WHERE `user_id` = :user_id:
+AND `is_read` = :is_read:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\NotificationModel.php(31): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\BaseController.php(105): App\Models\NotificationModel->getUnreadCount(2)
+ 8 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->setupViewData()
+ 9 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+10 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-27 16:07:53 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `n...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `n...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `n...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `n...')
+#4 C:\xampp\htdocs\ITE311-LUMABAO\app\Database\Migrations\2025-11-27-000001_CreateNotificationsTable.php(46): CodeIgniter\Database\Forge->createTable('notifications', true)
+#5 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateNotificationsTable->up()
+#6 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\ITE311-LUMABAO\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\ITE311-LUMABAO\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-11-27 16:08:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:08:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:14 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:14 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:14 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:14 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:15 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:15 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:15 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:15 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:16 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:16 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:09:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:09:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:09:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:09:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:10:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:10:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:10:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:10:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:10:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:10:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:10:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:10:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:10:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:10:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 16:10:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 16:10:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:11:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:11:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:11:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:11:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:11:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:11:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:12:15 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:12:17 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:12:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:12:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:12:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:13:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:13:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:14:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:14:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:15:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:15:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:16:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:16:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:17:39 --> mysqli_sql_exception: Unknown column 'order' in 'order clause' in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(933): App\Controllers\Student->courseDetails('4')
+#6 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#7 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-27 16:17:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+[Method: GET, Route: student/courses/4]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 2 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('4')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'4\'
+ORDER BY `order` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'4\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 4 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('4')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:39 --> [Caused by] mysqli_sql_exception: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'4\'
+ORDER BY `order` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'4\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'4\'
+ORDER BY `order` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 5 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:17:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:17:41 --> mysqli_sql_exception: Unknown column 'order' in 'order clause' in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+#6 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#7 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-27 16:17:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+[Method: GET, Route: student/courses/7]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 2 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 4 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:41 --> [Caused by] mysqli_sql_exception: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 5 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:17:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:17:48 --> mysqli_sql_exception: Unknown column 'order' in 'order clause' in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+#6 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#7 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-27 16:17:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+[Method: GET, Route: student/courses/7]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 2 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 4 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:48 --> [Caused by] mysqli_sql_exception: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 5 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:17:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+ERROR - 2025-11-27 16:17:53 --> mysqli_sql_exception: Unknown column 'order' in 'order clause' in C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ITE311-LUMABAO\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ITE311-LUMABAO\app\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+#6 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#7 C:\xampp\htdocs\ITE311-LUMABAO\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ITE311-LUMABAO\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ITE311-LUMABAO\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-27 16:17:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+[Method: GET, Route: student/courses/7]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 2 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 4 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 16:17:53 --> [Caused by] mysqli_sql_exception: Unknown column 'order' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `lessons`
+WHERE `course_id` = \'7\'
+ORDER BY `order` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `lessons`
+WHERE `course_id` = :course_id:
+ORDER BY `order` ASC', [...], false)
+ 5 APPPATH\Controllers\Student.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Student->courseDetails('7')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:17:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:17:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:18:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:18:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:18:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:18:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:18:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:19:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:19:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:20:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:20:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:21:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:22:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:22:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:23:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:23:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:24:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:24:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:25:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:25:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:26:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:26:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:27:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:27:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:28:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:28:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:29:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:29:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:30:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:30:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:50 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:31:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:32:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:32:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:33:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:33:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:34:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:34:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:35:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:35:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:36:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:36:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:37:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:08 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:08 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:08 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:08 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:38:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:39:09 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:39:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:40:09 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:40:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:09 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:41:58 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:09 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:10 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:10 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:42:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:43:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:43:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:44:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:44:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:45:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:10 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:46:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:20 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:21 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:21 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:21 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:47:58 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:48:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:48:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:48:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:49:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:49:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:50:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:50:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:51:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:52:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:53:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:53:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:54:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:54:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:55:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:55:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:56:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:56:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:57:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:57:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:33 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+CRITICAL - 2025-11-27 16:58:36 --> ErrorException: unlink(C:\xampp\htdocs\ITE311-LUMABAO\writable\debugbar/debugbar_1764262477.322344.json): No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\ITE311-LUMABAO\\writable\\debugbar/debugbar_1764262477.322344.json): No such file or directory', 'C:\\xampp\\htdocs\\ITE311-LUMABAO\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): unlink('C:\\xampp\\htdocs\\ITE311-LUMABAO\\writable\\debugbar/debugbar_1764262477.322344.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(517): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1764262716.426215', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(496): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(152): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(339): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:58:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:59:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:59:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:59:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 16:59:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:50 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:00:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:01:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:01:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:02:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:02:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:02:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:02:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:02:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:02:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:02:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:02:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:02:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:02:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:02:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:02:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:02:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:02:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:02:56 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:56 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:58 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:02:59 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:02 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:02 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:03:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:04:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:04:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:05:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:05:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:06:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:06:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:25 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:07:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:07:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:07:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:07:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:07:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:07:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:07:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:07:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:07:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 17:07:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 17:07:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 17:07:45 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:50 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:50 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 17:07:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.

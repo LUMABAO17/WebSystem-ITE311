@@ -286,6 +286,19 @@ class Course extends BaseController
             ]);
         }
 
+        // Create a notification for the enrolled student
+        try {
+            $notificationModel = new \App\Models\NotificationModel();
+            $notificationModel->insert([
+                'user_id'    => $userId,
+                'message'    => 'You have been enrolled in ' . ($course['title'] ?? 'a course'),
+                'is_read'    => 0,
+                'created_at' => date('Y-m-d H:i:s'),
+            ]);
+        } catch (\Throwable $e) {
+            log_message('error', 'Failed to create enrollment notification: ' . $e->getMessage());
+        }
+
         // Return the enrolled course to update UI
         return $this->response->setJSON([
             'status' => 'success',

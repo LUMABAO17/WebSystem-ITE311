@@ -27,6 +27,10 @@ $routes->group('', ['namespace' => 'App\\Controllers'], function($routes) {
         // Course Enrollment
         $routes->post('/course/enroll', 'Course::enroll');
 
+        // Notifications API for all authenticated users
+        $routes->get('notifications', 'Notifications::get', ['as' => 'notifications.get']);
+        $routes->post('notifications/mark_read/(:num)', 'Notifications::mark_as_read/$1', ['as' => 'notifications.mark_read']);
+
         // Common materials routes
         $routes->get('materials/download/(:num)', 'Materials::download/$1');
         

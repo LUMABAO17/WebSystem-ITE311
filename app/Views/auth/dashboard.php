@@ -1150,6 +1150,9 @@ $(function() {
                         }
                         $('#enrolledList').prepend(item);
                     }
+                    if (res.status === 'success' && window.refreshNotifications) {
+                        window.refreshNotifications();
+                    }
                     // Remove or disable button
                     $btn.closest('.list-group-item').remove();
                 } else {
