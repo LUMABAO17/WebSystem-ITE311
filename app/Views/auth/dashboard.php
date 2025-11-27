@@ -169,6 +169,66 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
         background-color: rgba(66, 187, 66, 0.1);
         color: var(--primary-color);
         border: 1px solid rgba(66, 187, 66, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .btn-soft-primary:hover {
+        background-color: rgba(66, 187, 66, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    /* Enhanced card styles */
+    .dashboard-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        border-color: rgba(0,0,0,0.1);
+    }
+    
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+    }
+    
+    .dashboard-card:hover .card-icon {
+        transform: scale(1.1);
+    }
+    
+    /* Upload materials dropdown */
+    .upload-dropdown {
+        margin-top: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .upload-dropdown .form-select {
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.1);
+        background-color: #f8f9fa;
+        transition: all 0.3s ease;
+    }
+    
+    .upload-dropdown .form-select:hover {
+        background-color: #fff;
+        border-color: var(--primary-color);
+    }
+    
+    .upload-dropdown .form-select:focus {
+        box-shadow: 0 0 0 0.25rem rgba(66, 187, 66, 0.25);
+        border-color: var(--primary-color);
     }
     .btn-soft-primary:hover {
         background-color: rgba(66, 187, 66, 0.2);
@@ -498,60 +558,103 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                 <div class="col-12">
                     <h4 class="fw-bold mb-3">Quick Actions</h4>
                 </div>
+                <!-- Manage Courses Card - Moved to top and enhanced -->
                 <div class="col-md-3">
-                    <div class="dashboard-card p-4">
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon" style="background-color: var(--primary-light); color: #fff;">
-                                <i class="fas fa-users"></i>
+                    <div class="dashboard-card p-4 h-100" style="border-left: 4px solid var(--primary-color);">
+                        <a href="<?= site_url('admin/courses') ?>" class="text-decoration-none text-dark">
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon" style="background-color: var(--primary-color); color: #fff; transform: scale(1.1);">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-1">Manage Courses</h5>
+                                    <p class="text-muted mb-0 small">View, add, and manage all courses</p>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="mb-1 fw-bold">Manage Users</h6>
-                                <p class="text-muted small mb-0">View and manage all users</p>
-                            </div>
-                        </div>
-                        <a href="/admin/users" class="stretched-link"></a>
+                        </a>
                     </div>
                 </div>
+                
+                <!-- Manage Users Card -->
                 <div class="col-md-3">
-                    <div class="dashboard-card p-4">
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon" style="background-color: var(--secondary-color); color: #fff;">
-                                <i class="fas fa-cog"></i>
+                    <div class="dashboard-card p-4 h-100">
+                        <a href="<?= site_url('admin/users') ?>" class="text-decoration-none text-dark">
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon" style="background-color: var(--secondary-color); color: #fff;">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="mb-1">Manage Users</h5>
+                                    <p class="text-muted mb-0 small">View and manage system users</p>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="mb-1 fw-bold">System Settings</h6>
-                                <p class="text-muted small mb-0">Configure system preferences</p>
-                            </div>
-                        </div>
-                        <a href="/admin/settings" class="stretched-link"></a>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="dashboard-card p-4">
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon" style="background-color: var(--primary-light); color: #fff;">
-                                <i class="fas fa-chart-bar"></i>
+                        
+                        <?php if (!empty($admin_courses)): ?>
+                            <div class="upload-dropdown mt-3" onclick="event.stopPropagation()">
+                                <div class="d-grid">
+                                    <?php $uploadBaseUrl = ($user['role'] === 'admin') ? 'admin' : 'teacher'; ?>
+                                    <select class="form-select form-select-sm" 
+                                            onchange="if(this.value) window.location.href='<?= site_url('$uploadBaseUrl/courses/') ?>'+this.value+'/upload'"
+                                            style="cursor: pointer;">
+                                        <option value="" selected disabled>Upload materials...</option>
+                                        <?php foreach ($admin_courses as $course): ?>
+                                            <option value="<?= $course['id'] ?>">
+                                                <?= esc(strlen($course['title']) > 22 ? substr($course['title'], 0, 20) . '...' : $course['title']) ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <small class="text-muted">or</small>
+                                </div>
+                                <div class="d-grid mt-1">
+                                    <a href="<?= site_url('admin/courses') ?>" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-list me-1"></i> View All Courses
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="mb-1 fw-bold">Reports</h6>
-                                <p class="text-muted small mb-0">View system analytics</p>
+                        <?php else: ?>
+                            <div class="mt-3">
+                                <a href="/admin/courses/create" class="btn btn-sm btn-primary w-100">
+                                    <i class="fas fa-plus me-1"></i> Add New Course
+                                </a>
                             </div>
-                        </div>
-                        <a href="/admin/reports" class="stretched-link"></a>
+                        <?php endif; ?>
                     </div>
                 </div>
+                <!-- Reports Card -->
                 <div class="col-md-3">
-                    <div class="dashboard-card p-4">
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon" style="background-color: var(--warning-color); color: #fff;">
-                                <i class="fas fa-bell"></i>
+                    <div class="dashboard-card p-4 h-100">
+                        <a href="<?= site_url('admin/reports') ?>" class="text-decoration-none text-dark">
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon" style="background-color: var(--primary-light); color: #fff;">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold">Reports</h6>
+                                    <p class="text-muted small mb-0">View system analytics</p>
+                                </div>
                             </div>
-                            <div>
-                                <h6 class="mb-1 fw-bold">Notifications</h6>
-                                <p class="text-muted small mb-0">Manage system alerts</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Notifications Card -->
+                <div class="col-md-3">
+                    <div class="dashboard-card p-4 h-100">
+                        <a href="<?= site_url('admin/notifications') ?>" class="text-decoration-none text-dark">
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon" style="background-color: var(--warning-color); color: #fff;">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold">Notifications</h6>
+                                    <p class="text-muted small mb-0">Manage system alerts</p>
+                                </div>
                             </div>
-                        </div>
-                        <a href="/admin/notifications" class="stretched-link"></a>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -635,7 +738,35 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                                     <p class="text-muted mb-0 small">Track students' progress and grades</p>
                                 </div>
                             </div>
-                            <a href="/teacher/progress" class="stretched-link"></a>
+                            <a href="/teacher/students" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-soft-primary p-3 rounded-3 me-3">
+                                    <i class="fas fa-file-upload text-primary" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title mb-1">Upload Materials</h5>
+                                    <p class="text-muted mb-0 small">Share course materials and resources</p>
+                                </div>
+                            </div>
+                            <?php if (!empty($teacher_courses)): ?>
+                                <div class="mt-2">
+                                    <small class="text-muted">Select a course to upload:</small>
+                                    <select class="form-select form-select-sm mt-1" onchange="if(this.value) window.location.href='/teacher/courses/'+this.value+'/upload'">
+                                        <option value="">Choose a course...</option>
+                                        <?php foreach ($teacher_courses as $course): ?>
+                                            <option value="<?= $course['id'] ?>"><?= esc($course['title']) ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            <?php else: ?>
+                                <a href="#" class="stretched-link"></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -783,6 +914,73 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                     </div>
                 </div>
             </div>
+
+            <!-- Course Materials Section -->
+            <?php if (!empty($enrolled_list)): ?>
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="mb-0"><i class="fas fa-file-download me-2" style="color: var(--primary-color);"></i>Course Materials</h5>
+                    </div>
+                    <div class="card-body">
+                        <?php
+                        $materialModel = new \App\Models\MaterialModel();
+                        $hasMaterials = false;
+                        ?>
+                        <?php foreach ($enrolled_list as $course): ?>
+                            <?php
+                            $courseMaterials = $materialModel->getMaterialsByCourse($course['id']);
+                            if (!empty($courseMaterials)):
+                                $hasMaterials = true;
+                                break;
+                            endif;
+                            ?>
+                        <?php endforeach; ?>
+                        
+                        <?php if ($hasMaterials): ?>
+                            <div class="accordion" id="materialsAccordion">
+                                <?php foreach ($enrolled_list as $course): ?>
+                                    <?php
+                                    $courseMaterials = $materialModel->getMaterialsByCourse($course['id']);
+                                    if (empty($courseMaterials)) continue;
+                                    ?>
+                                    <div class="accordion-item border-0 mb-2">
+                                        <h2 class="accordion-header" id="heading<?= $course['id'] ?>">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $course['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $course['id'] ?>">
+                                                <i class="fas fa-book me-2"></i><?= esc($course['title']) ?> (<?= count($courseMaterials) ?> files)
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<?= $course['id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $course['id'] ?>" data-bs-parent="#materialsAccordion">
+                                            <div class="accordion-body">
+                                                <div class="list-group">
+                                                    <?php foreach ($courseMaterials as $material): ?>
+                                                        <div class="list-group-item d-flex justify-content-between align-items-center border-0">
+                                                            <div>
+                                                                <i class="fas fa-file me-2"></i>
+                                                                <span><?= esc($material['file_name']) ?></span>
+                                                                <small class="text-muted d-block">
+                                                                    Uploaded: <?= date('M j, Y', strtotime($material['created_at'])) ?>
+                                                                </small>
+                                                            </div>
+                                                            <a href="<?= site_url('materials/download/' . $material['id']) ?>" class="btn btn-sm btn-outline-primary">
+                                                                <i class="fas fa-download me-1"></i> Download
+                                                            </a>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="text-center text-muted py-4">
+                                <i class="fas fa-folder-open fa-3x mb-3"></i>
+                                <p>No materials available for your enrolled courses yet.</p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
 
             <!-- Recent Activity Section -->
             <div class="card border-0 shadow-sm mt-4">

@@ -1,0 +1,476 @@
+DEBUG - 2025-11-27 15:12:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:12:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:13:08 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:13:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:13:47 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:14:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:14:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:18 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:19 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:15:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:15:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:15:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:15:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:15:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:15:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:15:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:15:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:15:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:41 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:15:41 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:15:41 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:15:41 --> Max file size: 102400 KB
+ERROR - 2025-11-27 15:15:41 --> Upload failed: User not logged in
+DEBUG - 2025-11-27 15:15:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:15:53 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:15:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:15:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:15:58 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:15:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:15:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:16:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:16:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:16:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:18:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:18:00 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:18:00 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:18:00 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:18:00 --> Max file size: 102400 KB
+ERROR - 2025-11-27 15:18:00 --> Upload failed: User not logged in
+DEBUG - 2025-11-27 15:18:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:18:00 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:02 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:25:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:25:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:25:02 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:25:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:25:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:25:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:03 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:25:03 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:25:03 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:25:03 --> Max file size: 102400 KB
+ERROR - 2025-11-27 15:25:03 --> Upload failed: User not logged in
+DEBUG - 2025-11-27 15:25:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:04 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:06 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:25:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:25:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:25:07 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:07 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:25:07 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:25:07 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:25:07 --> Max file size: 102400 KB
+ERROR - 2025-11-27 15:25:07 --> Upload failed: User not logged in
+DEBUG - 2025-11-27 15:25:07 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:07 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:25:10 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:25:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:25:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:28:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:28:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:28:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:28:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:28:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:28:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:28:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:28:31 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:28:31 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:28:31 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:28:31 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:28:31 --> User data: {"id":"1","name":"Moying","email":"almuhyilumabao2@gmail.com","role":"admin"}
+DEBUG - 2025-11-27 15:28:31 --> Rendering upload form view for course ID: 6
+DEBUG - 2025-11-27 15:28:31 --> Number of existing materials: 0
+DEBUG - 2025-11-27 15:28:31 --> View path: C:\xampp\htdocs\ITE311-LUMABAO\app\Views/admin/materials/upload.php
+DEBUG - 2025-11-27 15:28:31 --> View exists: Yes
+CRITICAL - 2025-11-27 15:28:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/templates/main.php"
+[Method: GET, Route: admin/courses/6/upload]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/templates/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('admin/templates/main', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materials/upload', [], true)
+ 4 APPPATH\Controllers\Materials.php(93): view('admin/materials/upload', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Materials->upload('6')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Materials))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:29:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:29:54 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:29:54 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:29:54 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:29:54 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:29:54 --> User data: {"id":"1","name":"Moying","email":"almuhyilumabao2@gmail.com","role":"admin"}
+DEBUG - 2025-11-27 15:29:54 --> Rendering upload form view for course ID: 6
+DEBUG - 2025-11-27 15:29:54 --> Number of existing materials: 0
+DEBUG - 2025-11-27 15:29:54 --> View path: C:\xampp\htdocs\ITE311-LUMABAO\app\Views/admin/materials/upload.php
+DEBUG - 2025-11-27 15:29:54 --> View exists: Yes
+DEBUG - 2025-11-27 15:30:13 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:30:13 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:30:13 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:30:13 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:30:13 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:30:13 --> User data: {"id":"1","name":"Moying","email":"almuhyilumabao2@gmail.com","role":"admin"}
+DEBUG - 2025-11-27 15:30:13 --> Processing POST request
+DEBUG - 2025-11-27 15:30:13 --> POST data: {"title":"wow","description":"wowowwwww"}
+DEBUG - 2025-11-27 15:30:13 --> FILES data: {"material":{}}
+DEBUG - 2025-11-27 15:30:13 --> Validation rules: {"title":"required|min_length[3]|max_length[255]","material":["uploaded[material]","mime_in[material,application\/pdf,application\/msword,application\/vnd.openxmlformats-officedocument.wordprocessingml.document,application\/vnd.ms-powerpoint,application\/vnd.openxmlformats-officedocument.presentationml.presentation,application\/vnd.ms-excel,application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet,image\/jpeg,image\/png,image\/gif,text\/plain,application\/zip]","ext_in[material,pdf,doc,docx,ppt,pptx,xls,xlsx,jpg,jpeg,png,gif,txt,zip]","max_size[material,102400]"]}
+DEBUG - 2025-11-27 15:30:13 --> Form validation passed
+DEBUG - 2025-11-27 15:30:13 --> File info: {"name":"411581.jpg","originalName":"411581.jpg","mimeType":"image\/jpeg","size":41313,"extension":"jpg","isValid":true,"hasMoved":false,"error":"The file uploaded with success."}
+DEBUG - 2025-11-27 15:30:13 --> Generated new filename: 1764257413_225af6bbff4b99bc5bb0.jpg
+DEBUG - 2025-11-27 15:30:13 --> Upload directory permissions: 0777
+DEBUG - 2025-11-27 15:30:13 --> Is upload directory writable: yes
+DEBUG - 2025-11-27 15:30:13 --> File moved successfully to: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\1764257413_225af6bbff4b99bc5bb0.jpg
+DEBUG - 2025-11-27 15:30:13 --> Attempting to save to database: {"course_id":"6","title":"wow","description":"wowowwwww","file_name":"411581.jpg","stored_name":"1764257413_225af6bbff4b99bc5bb0.jpg","file_type":"image\/jpeg","file_size":41313,"uploaded_by":"1","created_at":"2025-11-27 15:30:13"}
+DEBUG - 2025-11-27 15:30:13 --> File uploaded and saved to database with ID: 1
+DEBUG - 2025-11-27 15:30:13 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:30:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:30:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 15:30:13 --> Error: Call to undefined function formatSizeUnits()
+[Method: GET, Route: admin/courses/6]
+in APPPATH\Views\course\view.php on line 90.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('course/view', [], true)
+ 4 APPPATH\Controllers\Course.php(58): view('course/view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Course->view('6')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Course))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:32:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:32:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:32:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:33:10 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:33:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:33:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:33:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:33:50 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:18 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:41 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:48 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:34:49 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:34:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:34:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:34:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:34:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:34:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:34:55 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:35:01 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:35:03 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:35:05 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:35:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:35:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:35:13 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:46 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:52 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:56 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:36:57 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:38:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:36 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:37 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:37 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:47:37 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:47:37 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:47:37 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:47:37 --> User data: {"id":"3","name":"leah","email":"leah@gmail.com","role":"teacher"}
+DEBUG - 2025-11-27 15:47:37 --> Rendering upload form view for course ID: 4
+DEBUG - 2025-11-27 15:47:37 --> Number of existing materials: 0
+DEBUG - 2025-11-27 15:47:37 --> View path: C:\xampp\htdocs\ITE311-LUMABAO\app\Views/admin/materials/upload.php
+DEBUG - 2025-11-27 15:47:37 --> View exists: Yes
+DEBUG - 2025-11-27 15:47:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:47:43 --> === Starting file upload process ===
+DEBUG - 2025-11-27 15:47:43 --> Upload path: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\
+DEBUG - 2025-11-27 15:47:43 --> Allowed file types: pdf, doc, docx, ppt, pptx, xls, xlsx, jpg, jpeg, png, gif, txt, zip
+DEBUG - 2025-11-27 15:47:43 --> Max file size: 102400 KB
+DEBUG - 2025-11-27 15:47:43 --> User data: {"id":"3","name":"leah","email":"leah@gmail.com","role":"teacher"}
+DEBUG - 2025-11-27 15:47:43 --> Processing POST request
+DEBUG - 2025-11-27 15:47:43 --> POST data: {"title":"adwawdawd","description":"awdawdawdawd"}
+DEBUG - 2025-11-27 15:47:43 --> FILES data: {"material":{}}
+DEBUG - 2025-11-27 15:47:43 --> Validation rules: {"title":"required|min_length[3]|max_length[255]","material":["uploaded[material]","mime_in[material,application\/pdf,application\/msword,application\/vnd.openxmlformats-officedocument.wordprocessingml.document,application\/vnd.ms-powerpoint,application\/vnd.openxmlformats-officedocument.presentationml.presentation,application\/vnd.ms-excel,application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet,image\/jpeg,image\/png,image\/gif,text\/plain,application\/zip]","ext_in[material,pdf,doc,docx,ppt,pptx,xls,xlsx,jpg,jpeg,png,gif,txt,zip]","max_size[material,102400]"]}
+DEBUG - 2025-11-27 15:47:43 --> Form validation passed
+DEBUG - 2025-11-27 15:47:43 --> File info: {"name":"1764257413_225af6bbff4b99bc5bb0.jpg","originalName":"1764257413_225af6bbff4b99bc5bb0.jpg","mimeType":"image\/jpeg","size":41313,"extension":"jpg","isValid":true,"hasMoved":false,"error":"The file uploaded with success."}
+DEBUG - 2025-11-27 15:47:43 --> Generated new filename: 1764258463_d062237a800ad8236fc7.jpg
+DEBUG - 2025-11-27 15:47:43 --> Upload directory permissions: 0777
+DEBUG - 2025-11-27 15:47:43 --> Is upload directory writable: yes
+DEBUG - 2025-11-27 15:47:43 --> File moved successfully to: C:\xampp\htdocs\ITE311-LUMABAO\writable\uploads\materials\1764258463_d062237a800ad8236fc7.jpg
+DEBUG - 2025-11-27 15:47:43 --> Attempting to save to database: {"course_id":"4","title":"adwawdawd","description":"awdawdawdawd","file_name":"1764257413_225af6bbff4b99bc5bb0.jpg","stored_name":"1764258463_d062237a800ad8236fc7.jpg","file_type":"image\/jpeg","file_size":41313,"uploaded_by":"3","created_at":"2025-11-27 15:47:43"}
+DEBUG - 2025-11-27 15:47:43 --> File uploaded and saved to database with ID: 2
+DEBUG - 2025-11-27 15:47:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:47:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:47:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:47:51 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-27 15:47:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-27 15:47:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 15:47:54 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:48:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:48:22 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:48:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:48:23 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-27 15:48:24 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.

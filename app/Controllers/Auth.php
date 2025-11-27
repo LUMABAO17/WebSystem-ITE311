@@ -337,6 +337,12 @@ class Auth extends BaseController
                                       ->get()
                                       ->getResultArray()
                 ];
+                
+                // Get all courses for materials upload dropdown
+                $data['admin_courses'] = $db->table('courses')
+                    ->orderBy('title', 'ASC')
+                    ->get()
+                    ->getResultArray();
                 break;
                 
             case 'teacher':
@@ -356,6 +362,13 @@ class Auth extends BaseController
                     ->where('teacher_id', $userId)
                     ->orderBy('created_at', 'DESC')
                     ->limit(3)
+                    ->get()
+                    ->getResultArray();
+                    
+                // Get all courses for materials upload dropdown
+                $data['teacher_courses'] = $db->table('courses')
+                    ->where('teacher_id', $userId)
+                    ->orderBy('title', 'ASC')
                     ->get()
                     ->getResultArray();
                 break;

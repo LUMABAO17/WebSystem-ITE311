@@ -1,10 +1,15 @@
 # Disable directory browsing
 Options -Indexes
 
-# Redirect all requests to the public directory
+# Enable the rewrite engine
 <IfModule mod_rewrite.c>
-   RewriteEngine On
-  RewriteBase /ITE311-LUMABAO/
-  RewriteRule ^$ public/ [L]
-  RewriteRule (.*) public/$1 [L]
+    RewriteEngine On
+    
+    # Redirect to public directory if not already there
+    RewriteCond %{REQUEST_URI} !^/ITE311-LUMABAO/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+    
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>

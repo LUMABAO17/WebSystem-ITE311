@@ -10,8 +10,12 @@ class RoleFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        // Check if user is logged in
-        if (!session()->get('isLoggedIn')) {
+        $session = session();
+        
+        // Check if user is logged in based on the actual session structure from Auth controller
+        if (!$session->has('isLoggedIn') || $session->get('isLoggedIn') !== true) {
+            // Store the intended URL before redirecting to login
+            $session->set('redirect', current_url());
             return redirect()->to('/login')->with('error', 'Please login to access this page.');
         }
 
@@ -20,8 +24,8 @@ class RoleFilter implements FilterInterface
             return;
         }
 
-        // Get user role from session
-        $userRole = session()->get('role');
+        // Get user role directly from session (not from user array)
+        $userRole = $session->get('role');
 
         // Check if user has any of the required roles
         if (!in_array($userRole, $arguments)) {
