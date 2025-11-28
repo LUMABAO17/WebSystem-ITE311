@@ -223,6 +223,36 @@ class Course extends BaseController
         return redirect()->back()->with('error', 'Failed to delete course');
     }
     
+    public function search()
+    {
+        if (!$this->isLoggedIn() || !$this->hasRole('admin')) {
+            return $this->response->setStatusCode(403)->setJSON([
+                'status' => 'error',
+                'message' => 'Unauthorized access'
+            ]);
+        }
+
+        $term = trim((string) $this->request->getVar('term'));
+
+        if ($term === '') {
+            return $this->response->setJSON([]);
+        }
+
+        $builder = $this->courseModel
+            ->select('courses.id, courses.title, courses.status, courses.created_at, users.name as teacher_name')
+            ->join('users', 'users.id = courses.teacher_id', 'left')
+            ->groupStart()
+                ->like('courses.title', $term)
+                ->orLike('courses.description', $term)
+                ->orLike('users.name', $term)
+            ->groupEnd()
+            ->orderBy('courses.created_at', 'DESC');
+
+        $results = $builder->findAll();
+
+        return $this->response->setJSON($results);
+    }
+    
     /**
      * Handle course enrollment
      */

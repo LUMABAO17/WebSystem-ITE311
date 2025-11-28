@@ -1,0 +1,240 @@
+DEBUG - 2025-11-28 16:54:30 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:54:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:54:38 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:54:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:54:43 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:54:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:55:11 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:55:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:55:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:55:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:56:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:57:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:58:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:58:14 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:58:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:58:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:58:25 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:58:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:58:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:58:34 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:58:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:58:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:58:42 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:58:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:58:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:58:44 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:58:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:58:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:59:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 16:59:32 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:59:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:59:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:59:39 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:59:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:59:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 16:59:40 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 16:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 16:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:00:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 17:00:27 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:00:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:00:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:00:31 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:00:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:00:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:01:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 17:02:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+DEBUG - 2025-11-28 17:02:18 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:02:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:02:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:02:26 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:02:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:02:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:02:28 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:02:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:02:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:02:35 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.
+WARNING - 2025-11-28 17:02:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$materialModel is deprecated in APPPATH\Controllers\Course.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-28 17:02:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Course::$enrollmentModel is deprecated in APPPATH\Controllers\Course.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Course->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 17:03:12 --> Session: Class initialized using 'App\Libraries\CustomSessionHandler' driver.

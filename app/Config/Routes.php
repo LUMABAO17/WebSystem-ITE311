@@ -38,6 +38,7 @@ $routes->group('', ['namespace' => 'App\\Controllers'], function($routes) {
         $routes->group('admin', ['filter' => 'role:admin'], function($routes) {
             // Course management
             $routes->get('courses', 'Course::index', ['as' => 'admin.courses']);
+            $routes->get('courses/search', 'Course::search', ['as' => 'admin.courses.search']);
             $routes->get('courses/create', 'Course::create', ['as' => 'admin.courses.create']);
             $routes->post('courses/store', 'Course::store', ['as' => 'admin.courses.store']);
             $routes->get('courses/(:num)', 'Course::view/$1', ['as' => 'admin.courses.view']);
