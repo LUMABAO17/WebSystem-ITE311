@@ -39,13 +39,10 @@
                         </div>
                         <div class="col-md-6 text-md-end mt-2 mt-md-0">
                             <small class="text-muted">
-                                Client-side filter updates the table instantly.
-                                Server-side search updates the panel below.
+                                Type to instantly filter the courses in the table below.
                             </small>
                         </div>
                     </div>
-
-                    <div id="courseSearchResults"></div>
 
                     <div class="table-responsive">
                         <table class="table table-hover" id="adminCourseTable">
@@ -109,8 +106,6 @@
     $(function () {
         var $searchInput = $('#courseSearchInput');
         var $tableRows = $('#adminCourseTable tbody tr');
-        var $results = $('#courseSearchResults');
-        var searchDelay;
 
         $searchInput.on('keyup', function () {
             var term = $(this).val().toLowerCase();
@@ -119,64 +114,7 @@
                 var text = $(this).text().toLowerCase();
                 $(this).toggle(text.indexOf(term) > -1);
             });
-
-            clearTimeout(searchDelay);
-            searchDelay = setTimeout(function () {
-                runAjaxSearch(term);
-            }, 500);
         });
-
-        function runAjaxSearch(term) {
-            if (!term) {
-                $results.empty();
-                return;
-            }
-
-            $.ajax({
-                url: '<?= site_url('admin/courses/search') ?>',
-                method: 'GET',
-                dataType: 'json',
-                data: { term: term },
-                success: function (data) {
-                    var html = '';
-
-                    if (!Array.isArray(data) || data.length === 0) {
-                        html = "<div class='alert alert-warning mt-3'>No courses found for '<strong>" + escapeHtml(term) + "</strong>'.</div>";
-                    } else {
-                        html += "<div class='mt-3'>";
-                        html += "<h6 class='mb-2'>Server-side search results</h6>";
-                        html += "<div class='table-responsive'>";
-                        html += "<table class='table table-striped table-sm mb-0'>";
-                        html += "<thead><tr><th>ID</th><th>Title</th><th>Teacher</th><th>Status</th><th>Created At</th></tr></thead><tbody>";
-
-                        data.forEach(function (item) {
-                            var status = item.status || 'active';
-                            var statusLabel = status.charAt(0).toUpperCase() + status.slice(1);
-                            var statusClass = (status === 'active') ? 'success' : 'secondary';
-
-                            html += '<tr>' +
-                                '<td>' + item.id + '</td>' +
-                                '<td>' + escapeHtml(item.title) + '</td>' +
-                                '<td>' + escapeHtml(item.teacher_name || 'Unassigned') + '</td>' +
-                                '<td><span class="badge bg-' + statusClass + '">' + statusLabel + '</span></td>' +
-                                '<td>' + (item.created_at || '') + '</td>' +
-                                '</tr>';
-                        });
-
-                        html += '</tbody></table></div></div>';
-                    }
-
-                    $results.html(html);
-                },
-                error: function () {
-                    $results.html("<div class='alert alert-danger mt-3'>Error fetching search results. Please try again.</div>");
-                }
-            });
-        }
-
-        function escapeHtml(text) {
-            return $('<div/>').text(text || '').html();
-        }
     });
 </script>
 <?= $this->endSection() ?>

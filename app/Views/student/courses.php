@@ -27,9 +27,24 @@
     <?php endif; ?>
 
     <?php if (!empty($courses)): ?>
-        <div class="row">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input
+                    type="text"
+                    id="studentCourseSearchInput"
+                    class="form-control"
+                    placeholder="Search my courses...">
+            </div>
+            <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                <small class="text-muted">
+                    This search only filters your enrolled subjects on this page.
+                </small>
+            </div>
+        </div>
+
+        <div class="row" id="studentCoursesGrid">
             <?php foreach ($courses as $course): ?>
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4 student-course-item">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title"><?= esc($course['title']) ?></h5>
@@ -60,3 +75,21 @@
     <?php endif; ?>
 </div>
 <?= $this->endSection(); ?>
+
+<?= $this->section('scripts') ?>
+<script>
+    $(function () {
+        var $input = $('#studentCourseSearchInput');
+        var $items = $('#studentCoursesGrid .student-course-item');
+
+        $input.on('keyup', function () {
+            var term = $(this).val().toLowerCase();
+
+            $items.each(function () {
+                var text = $(this).text().toLowerCase();
+                $(this).toggle(text.indexOf(term) > -1);
+            });
+        });
+    });
+</script>
+<?= $this->endSection() ?>
