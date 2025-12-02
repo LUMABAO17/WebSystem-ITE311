@@ -1,463 +1,5 @@
 wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 <?= $this->extend('templates/header'); ?>
 <?= $this->section('title') ?><?= ucfirst($user['role']) ?> Dashboard<?= $this->endSection() ?>
-<style>
-    :root {
-        --primary-color:rgb(255, 72, 0);
-        --primary-light:rgb(114, 114, 114);
-        --secondary-color:rgb(133, 158, 153);
-        --warning-color:rgb(95, 62, 0);
-        --danger-color:rgb(107, 0, 0);
-        --light-bg: #f8f9fa;
-        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-    /* Force green theme for teacher and student dashboards */
-    .theme-teacher, .theme-student {
-        --primary-color: rgb(66, 187, 66);
-        --primary-light: #8de19a; /* lighter green */
-        --secondary-color: rgb(66, 187, 66);
-        --warning-color: #f59e0b;
-        --danger-color: #ef4444;
-        --card-bg: #ffffff;
-    }
-    /* Scope common utilities to theme for consistency */
-    .theme-teacher .text-primary, .theme-student .text-primary { color: var(--primary-color) !important; }
-    .theme-teacher .btn-primary, .theme-student .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
-    .theme-teacher .bg-soft-primary, .theme-student .bg-soft-primary { background-color: rgba(66, 187, 66, 0.1) !important; }
-    
-    /* Reset default margins and paddings */
-    h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Welcome Card */
-    .welcome-card {
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-        border-radius: 12px;
-        color: white;
-        padding: 1.75rem 2rem;
-        margin: 1rem 0 2rem 0;
-        box-shadow: 0 4px 12px rgba(45, 75, 93, 0.15);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        box-sizing: border-box;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .welcome-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(45, 75, 93, 0.2);
-    }
-    
-    .welcome-card h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: white;
-    }
-    
-    .welcome-card p {
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 0;
-    }
-    
-    .welcome-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 100%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-        transform: rotate(30deg);
-    }
-
-    /* Dashboard Cards */
-    .dashboard-card {
-        background: var(--card-bg);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        box-shadow: var(--card-shadow);
-    }
-    
-    .dashboard-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-        border-color: rgba(45, 75, 93, 0.1);
-    }
-    
-    .dashboard-card .card-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        margin-right: 1rem;
-    }
-    
-    /* Stats Cards */
-    .stats-card {
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        background: var(--card-bg);
-        box-shadow: var(--card-shadow);
-        padding: 1.5rem;
-    }
-    
-    .stats-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-        border-color: rgba(45, 75, 93, 0.1);
-    }
-    
-    .stats-card .card-icon {
-        width: 54px;
-        height: 54px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-right: 1.25rem;
-        background: rgba(45, 75, 93, 0.1);
-        color: var(--primary-color);
-    }
-    
-    .stats-card h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 0.5rem 0;
-        color: #2d3436;
-    }
-    
-    .stats-card h6 {
-        font-size: 0.875rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 0.25rem;
-        color: #636e72;
-    }
-    
-    .stats-card p.small {
-        color: #7f8c8d;
-        margin-bottom: 1rem;
-    }
-    
-    .stats-card .btn {
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.4rem 0.8rem;
-        border-radius: 6px;
-        transition: all 0.2s ease;
-    }
-    /* Global soft button variants tied to theme primary */
-    .btn-soft-primary {
-        background-color: rgba(66, 187, 66, 0.1);
-        color: var(--primary-color);
-        border: 1px solid rgba(66, 187, 66, 0.2);
-        transition: all 0.3s ease;
-    }
-    
-    .btn-soft-primary:hover {
-        background-color: rgba(66, 187, 66, 0.2);
-        transform: translateY(-2px);
-    }
-    
-    /* Enhanced card styles */
-    .dashboard-card {
-        transition: all 0.3s ease;
-        border: 1px solid rgba(0,0,0,0.05);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .dashboard-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-        border-color: rgba(0,0,0,0.1);
-    }
-    
-    .card-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        font-size: 1.25rem;
-        transition: all 0.3s ease;
-    }
-    
-    .dashboard-card:hover .card-icon {
-        transform: scale(1.1);
-    }
-    
-    /* Upload materials dropdown */
-    .upload-dropdown {
-        margin-top: 1rem;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .upload-dropdown .form-select {
-        cursor: pointer;
-        border: 1px solid rgba(0,0,0,0.1);
-        background-color: #f8f9fa;
-        transition: all 0.3s ease;
-    }
-    
-    .upload-dropdown .form-select:hover {
-        background-color: #fff;
-        border-color: var(--primary-color);
-    }
-    
-    .upload-dropdown .form-select:focus {
-        box-shadow: 0 0 0 0.25rem rgba(66, 187, 66, 0.25);
-        border-color: var(--primary-color);
-    }
-    .btn-soft-primary:hover {
-        background-color: rgba(66, 187, 66, 0.2);
-        color: var(--primary-color);
-    }
-    /* Global soft bg for icon tiles */
-    .bg-soft-primary {
-        background-color: rgba(66, 187, 66, 0.1) !important;
-    }
-    
-    .stats-card .btn-soft-primary {
-        background-color: rgba(108, 92, 231, 0.1);
-        color: #6c5ce7;
-        border: 1px solid rgba(108, 92, 231, 0.2);
-    }
-    
-    .stats-card .btn-soft-primary:hover {
-        background-color: rgba(108, 92, 231, 0.2);
-    }
-    
-    .stats-card .btn-soft-success {
-        background-color: rgba(0, 184, 148, 0.1);
-        color: #00b894;
-        border: 1px solid rgba(0, 184, 148, 0.2);
-    }
-    
-    .stats-card .btn-soft-success:hover {
-        background-color: rgba(0, 184, 148, 0.2);
-    }
-    
-    .stats-card .btn-soft-info {
-        background-color: rgba(9, 132, 227, 0.1);
-        color: #0984e3;
-        border: 1px solid rgba(9, 132, 227, 0.2);
-    }
-    
-    .stats-card .btn-soft-info:hover {
-        background-color: rgba(9, 132, 227, 0.2);
-    }
-    
-    /* Activity Section */
-    .recent-activity {
-        position: relative;
-        padding-left: 1.5rem;
-    }
-    
-    .activity-item {
-        position: relative;
-        padding: 1rem 0;
-        border-left: 2px solid #e9ecef;
-        padding-left: 1.5rem;
-    }
-    
-    .activity-item:last-child {
-        border-left-color: transparent;
-    }
-    
-    .activity-dot {
-        position: absolute;
-        left: -0.5rem;
-        top: 1.5rem;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        background: #6c5ce7;
-        border: 3px solid #fff;
-        z-index: 1;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .welcome-card {
-            text-align: center;
-            padding: 1.25rem !important;
-        }
-        
-        .welcome-card .d-flex {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .welcome-card .btn {
-            margin-top: 1rem;
-            display: inline-block;
-        }
-        
-        .stats-card {
-            margin-bottom: 1rem;
-        }
-        
-        .stats-card .d-flex {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .stats-card .card-icon {
-            margin: 0 auto 1rem auto;
-        }
-        
-        .stats-card .btn {
-            margin: 0.5rem auto 0 auto;
-            display: inline-block;
-        }
-    }
-    /* Dashboard Card Styles */
-    .dashboard-card {
-        background: white;
-        border: none;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        height: 100%;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        position: relative;
-        overflow: hidden;
-        border-left: 4px solid var(--primary-color);
-    }
-    
-    .dashboard-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .dashboard-card .card-icon {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 2.5rem;
-        opacity: 0.1;
-        color: var(--primary-color);
-        margin: 0;
-        width: auto;
-        height: auto;
-        pointer-events: none;
-    }
-
-    .dashboard-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--card-hover-shadow);
-    }
-
-    .card-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-    .stats-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .stats-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200%;
-        height: 200%;
-        background: rgba(255, 255, 255, 0.1);
-        transform: rotate(30deg);
-        pointer-events: none;
-    }
-
-    .stats-card .icon {
-        font-size: 2.5rem;
-        opacity: 0.8;
-        margin-bottom: 0.5rem;
-    }
-
-    .recent-activity {
-        position: relative;
-        padding-left: 1.5rem;
-        border-left: 2px solid #e9ecef;
-        margin-bottom: 1.5rem;
-    }
-
-    .activity-item {
-        position: relative;
-        padding-bottom: 1.5rem;
-    }
-
-    .activity-item:last-child {
-        padding-bottom: 0;
-    }
-
-    .activity-dot {
-        position: absolute;
-        left: -1.6rem;
-        top: 0.25rem;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: var(--primary-color);
-        border: 2px solid white;
-    }
-    /* Responsive Adjustments */
-    @media (max-width: 992px) {
-        .welcome-card h2 {
-            font-size: 1.25rem;
-        }
-        
-        .stats-card {
-            margin-bottom: 1rem;
-        }
-        
-        .stats-card h3 {
-            font-size: 1.5rem;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .welcome-card {
-            padding: 1.25rem;
-        }
-        
-        .welcome-card h2 {
-            font-size: 1.1rem;
-        }
-        
-        .stats-card {
-            padding: 1.25rem;
-        }
-        
-        .stats-card h3 {
-            font-size: 1.25rem;
-        }
-    }</style>
 
 <?= $this->section('content'); ?>
 <div class="content-wrapper theme-<?= esc($user['role']) ?>" style="width: 100%; max-width: 1400px; margin: 0 auto;">
@@ -509,11 +51,11 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                         <div class="d-flex align-items-center">
                             <div class="me-3">
                                 <div class="icon"><i class="fas fa-users"></i></div>
-                                <h3 class="mb-0 fw-bold">1,254</h3>
+                                <h3 class="mb-0 fw-bold"><?= number_format($stats['total_users'] ?? 0) ?></h3>
                                 <p class="mb-0 small">Total Users</p>
                             </div>
                             <div class="ms-auto">
-                                <span class="badge bg-white text-primary rounded-pill px-3 py-1">+12%</span>
+                                <span class="badge bg-white text-primary rounded-pill px-3 py-1">Live</span>
                             </div>
                         </div>
                     </div>
@@ -522,9 +64,9 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                     <div class="stats-card" style="background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-light) 100%);">
                         <div class="d-flex align-items-center">
                             <div class="me-3">
-                                <div class="icon"><i class="fas fa-book"></i></div>
-                                <h3 class="mb-0 fw-bold">356</h3>
-                                <p class="mb-0 small">Active Courses</p>
+                                <div class="icon"><i class="fas fa-user-check"></i></div>
+                                <h3 class="mb-0 fw-bold"><?= number_format($stats['active_users'] ?? 0) ?></h3>
+                                <p class="mb-0 small">Active Users</p>
                             </div>
                         </div>
                     </div>
@@ -534,7 +76,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                         <div class="d-flex align-items-center">
                             <div class="me-3">
                                 <div class="icon"><i class="fas fa-user-graduate"></i></div>
-                                <h3 class="mb-0 fw-bold">982</h3>
+                                <h3 class="mb-0 fw-bold"><?= number_format($stats['total_students'] ?? 0) ?></h3>
                                 <p class="mb-0 small">Students</p>
                             </div>
                         </div>
@@ -545,7 +87,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                         <div class="d-flex align-items-center">
                             <div class="me-3">
                                 <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                                <h3 class="mb-0 fw-bold">124</h3>
+                                <h3 class="mb-0 fw-bold"><?= number_format($stats['total_teachers'] ?? 0) ?></h3>
                                 <p class="mb-0 small">Teachers</p>
                             </div>
                         </div>
@@ -669,36 +211,33 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                                 
                                 <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
                             </div>
                             <div class="recent-activity">
-                                <div class="activity-item">
-                                    <div class="activity-dot"></div>
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <p class="mb-1 fw-medium">New user registered</p>
-                                            <p class="text-muted small mb-0">John Doe just signed up</p>
+                                <?php if (!empty($recent_activity ?? [])): ?>
+                                    <?php foreach ($recent_activity as $activity): ?>
+                                        <div class="activity-item">
+                                            <div class="activity-dot"></div>
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <p class="mb-1 fw-medium">
+                                                        <?php if (!empty($activity['icon'])): ?>
+                                                            <i class="<?= esc($activity['icon']) ?> me-1"></i>
+                                                        <?php endif; ?>
+                                                        <?= esc($activity['title'] ?? 'Activity') ?>
+                                                    </p>
+                                                    <p class="text-muted small mb-0">
+                                                        <?= esc($activity['description'] ?? '') ?>
+                                                    </p>
+                                                </div>
+                                                <span class="text-muted small">
+                                                    <?= !empty($activity['created_at']) 
+                                                        ? date('M j, Y g:i A', strtotime($activity['created_at'])) 
+                                                        : '' ?>
+                                                </span>
+                                            </div>
                                         </div>
-                                        <span class="text-muted small">2 min ago</span>
-                                    </div>
-                                </div>
-                                <div class="activity-item">
-                                    <div class="activity-dot"></div>
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <p class="mb-1 fw-medium">Course completed</p>
-                                            <p class="text-muted small mb-0">Sarah Johnson completed Web Development</p>
-                                        </div>
-                                        <span class="text-muted small">1 hour ago</span>
-                                    </div>
-                                </div>
-                                <div class="activity-item">
-                                    <div class="activity-dot"></div>
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <p class="mb-1 fw-medium">New course added</p>
-                                            <p class="text-muted small mb-0">Introduction to Data Science</p>
-                                        </div>
-                                        <span class="text-muted small">3 hours ago</span>
-                                    </div>
-                                </div>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <div class="text-muted small">No recent activity yet.</div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

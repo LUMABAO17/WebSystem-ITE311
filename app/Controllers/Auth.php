@@ -77,6 +77,7 @@ class Auth extends BaseController
                     'email' => filter_var($input['email'], FILTER_SANITIZE_EMAIL),
                     'password' => $hashedPassword,
                     'role' => 'student',
+                    'is_active' => 1,
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ];
@@ -326,18 +327,65 @@ class Auth extends BaseController
         // Add role-specific data
         switch ($role) {
             case 'admin':
-                // Get admin-specific data
+                // Build recent activity feed: latest users and courses
+                $recentUsers = $db->table('users')
+                    ->orderBy('created_at', 'DESC')
+                    ->limit(5)
+                    ->get()
+                    ->getResultArray();
+
+                $recentCourses = $db->table('courses')
+                    ->orderBy('created_at', 'DESC')
+                    ->limit(5)
+                    ->get()
+                    ->getResultArray();
+
+                $recentActivity = [];
+
+                foreach ($recentUsers as $userRow) {
+                    if (!empty($userRow['created_at'])) {
+                        $recentActivity[] = [
+                            'type' => 'user',
+                            'icon' => 'fas fa-user-plus',
+                            'title' => 'New user registered',
+                            'description' => ($userRow['name'] ?? 'Unknown') . (!empty($userRow['email']) ? ' (' . $userRow['email'] . ')' : ''),
+                            'created_at' => $userRow['created_at'],
+                        ];
+                    }
+                }
+
+                foreach ($recentCourses as $courseRow) {
+                    if (!empty($courseRow['created_at'])) {
+                        $recentActivity[] = [
+                            'type' => 'course',
+                            'icon' => 'fas fa-book-open',
+                            'title' => 'New course added',
+                            'description' => $courseRow['title'] ?? 'Untitled course',
+                            'created_at' => $courseRow['created_at'],
+                        ];
+                    }
+                }
+
+                // Sort all activity by most recent first and limit
+                usort($recentActivity, function ($a, $b) {
+                    return strtotime($b['created_at']) <=> strtotime($a['created_at']);
+                });
+
+                $recentActivity = array_slice($recentActivity, 0, 10);
+
+                // Get admin-specific stats
                 $data['stats'] = [
-                    'total_users' => $db->table('users')->countAllResults(),
-                    'total_courses' => $db->table('courses')->countAllResults(),
+                    'total_users'       => $db->table('users')->countAllResults(),
+                    'active_users'      => $db->table('users')->where('is_active', 1)->countAllResults(),
+                    'total_students'    => $db->table('users')->where('role', 'student')->countAllResults(),
+                    'total_teachers'    => $db->table('users')->where('role', 'teacher')->countAllResults(),
+                    'total_courses'     => $db->table('courses')->countAllResults(),
                     'total_enrollments' => $db->table('enrollments')->countAllResults(),
-                    'recent_users' => $db->table('users')
-                                      ->orderBy('created_at', 'DESC')
-                                      ->limit(5)
-                                      ->get()
-                                      ->getResultArray()
+                    'recent_users'      => $recentUsers,
                 ];
-                
+
+                $data['recent_activity'] = $recentActivity;
+
                 // Get all courses for materials upload dropdown
                 $data['admin_courses'] = $db->table('courses')
                     ->orderBy('title', 'ASC')

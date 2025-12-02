@@ -157,6 +157,7 @@ $userRole = session()->get('role') ?? 'guest';
             color: #6c757d;
             font-size: 1.1rem;
     </style>
+    <?= $this->renderSection('styles') ?>
 </head>
 <body>
     <!-- Sidebar Navigation -->

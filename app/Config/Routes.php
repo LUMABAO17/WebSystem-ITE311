@@ -13,6 +13,8 @@ $routes->get('about', 'Home::about');
 $routes->get('contact', 'Home::contact');
 
 // Authentication routes
+$routes->post('admin/users/store', 'Admin::storeUser', ['filter' => 'auth']);
+
 $routes->group('', ['namespace' => 'App\\Controllers'], function($routes) {
     // Public routes
     $routes->get('/register', 'Auth::register');
@@ -53,6 +55,13 @@ $routes->group('', ['namespace' => 'App\\Controllers'], function($routes) {
             
             // Notifications
             $routes->get('notifications', 'Admin::notifications', ['as' => 'admin.notifications']);
+
+            $routes->get('users', 'Admin::users', ['as' => 'admin.users']);
+            $routes->get('users/create', 'Admin::createUser', ['as' => 'admin.users.create']);
+            $routes->get('users/(:num)/edit', 'Admin::editUser/$1', ['as' => 'admin.users.edit']);
+            $routes->post('users/(:num)/update', 'Admin::updateUser/$1', ['as' => 'admin.users.update']);
+            $routes->post('users/(:num)/role', 'Admin::updateUserRole/$1', ['as' => 'admin.users.updateRole']);
+            $routes->get('users/(:num)/delete', 'Admin::deleteUser/$1', ['as' => 'admin.users.delete']);
         });
         
         // Teacher routes

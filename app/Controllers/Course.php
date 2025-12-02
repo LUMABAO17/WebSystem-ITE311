@@ -96,9 +96,18 @@ class Course extends BaseController
             return redirect()->to('/dashboard')->with('error', 'Unauthorized access');
         }
         
+        $db = \Config\Database::connect();
+        $teachers = $db->table('users')
+            ->where('role', 'teacher')
+            ->where('is_active', 1)
+            ->orderBy('name', 'ASC')
+            ->get()
+            ->getResultArray();
+        
         $data = [
             'title' => 'Create New Course',
-            'user' => $this->userData
+            'user' => $this->userData,
+            'teachers' => $teachers,
         ];
         
         return view('admin/courses/create', $data);
@@ -153,10 +162,19 @@ class Course extends BaseController
             return redirect()->to('/admin/courses')->with('error', 'Course not found');
         }
         
+        $db = \Config\Database::connect();
+        $teachers = $db->table('users')
+            ->where('role', 'teacher')
+            ->where('is_active', 1)
+            ->orderBy('name', 'ASC')
+            ->get()
+            ->getResultArray();
+        
         $data = [
             'title' => 'Edit Course',
             'course' => $course,
-            'user' => $this->userData
+            'user' => $this->userData,
+            'teachers' => $teachers,
         ];
         
         return view('admin/courses/edit', $data);

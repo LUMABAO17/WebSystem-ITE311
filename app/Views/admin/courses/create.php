@@ -46,18 +46,19 @@
                                         <option value="">Select Teacher</option>
                                         <?php 
                                         // In a real application, you would fetch teachers from the database
-                                        $teachers = [
-                                            ['id' => 1, 'name' => 'John Doe'],
-                                            ['id' => 2, 'name' => 'Jane Smith'],
-                                        ];
-                                        
-                                        foreach ($teachers as $teacher): 
-                                            $selected = (old('teacher_id') == $teacher['id']) ? 'selected' : '';
+                                        if (!empty($teachers)):
+                                            foreach ($teachers as $teacher): 
+                                                $selected = (old('teacher_id') == $teacher['id']) ? 'selected' : '';
                                         ?>
                                             <option value="<?= $teacher['id'] ?>" <?= $selected ?>>
                                                 <?= esc($teacher['name']) ?>
                                             </option>
-                                        <?php endforeach; ?>
+                                        <?php 
+                                            endforeach;
+                                        else:
+                                        ?>
+                                            <option value="">No teachers available</option>
+                                        <?php endif; ?>
                                     </select>
                                 </div>
                             </div>
